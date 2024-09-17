@@ -4,7 +4,25 @@ numbers as an argument. The function should return the total product of all
 numbers multiplied together.
 */
 
-// Your code here 
+function twoDimensionalProduct(arr){
+
+    let answer = 1;
+
+    for(let i = 0; i < arr.length; i++){
+        let subArr = arr[i];
+
+        for(let j = 0; j < subArr.length; j++){
+
+            answer = answer * subArr[j];
+
+
+        }
+
+
+    }
+    return answer;
+    
+}
 
 // let arr1 = [[6, 4], [5], [3, 1]];
 // console.log(twoDimensionalProduct(arr1)); // 360
