@@ -6,9 +6,7 @@ contains only unique numbers.
 */
 
 function twoSum(arr, targetNum){
-    let thisBool = false;
-
-
+ 
     for (let i = 0; i < arr.length; i++){
         let firstNum = arr[i];
 

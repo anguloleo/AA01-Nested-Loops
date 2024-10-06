@@ -5,6 +5,25 @@ that have a sum of zero. You may assume that the input array contains unique
 elements.
 */
 
+function strangeSums(arr){
+
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++){
+        let firstNum = arr[i];
+
+        for(let j = i + 1; j < arr.length; j++){
+            let secondNum = arr[j];
+
+            if(firstNum + secondNum === 0){
+                count ++;
+            }
+        }
+    }
+
+    return count;
+
+}
 
 // console.log(strangeSums([2, -3, 3, 4, -2]));     // 2
 // console.log(strangeSums([42, 3, -1, -42]));      // 1
