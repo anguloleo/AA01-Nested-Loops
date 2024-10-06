@@ -6,7 +6,36 @@ each of its elements is the max value in a column.
 */
 
 function maxColumn(matrix) {
-  // Your code here 
+
+  let maxArr = [];
+
+  for(let i = 0; i < matrix.length; i ++){
+
+    maxArr.push(matrix[0][i]);
+  }
+
+  //Find max values one directon
+    for(let i = 0; i < matrix.length-1; i++){
+      for(let j = 0; j < matrix[i].length; j++){
+
+      if(matrix[i][j] > matrix[i+1][j] ){
+        maxArr[j] = matrix[i][j];
+      }
+    }
+  }
+
+  //cycle through the last nested array to see if thoe are max or not
+  let lastArr = matrix[matrix.length-1];
+
+  for(let i = 0; i < lastArr.length; i++){
+
+    if(lastArr[i] > maxArr[i] ){
+      maxArr[i] = lastArr[i];
+    }
+    }
+  
+
+   return maxArr;
 }
 
 // matrix = [
